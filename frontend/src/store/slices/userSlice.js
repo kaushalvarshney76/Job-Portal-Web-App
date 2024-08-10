@@ -147,7 +147,7 @@ export const logout = () => async (dispatch) => {
         withCredentials: true,
       }
     );
-    dispatch(userSlice.actions.logoutSuccess());
+    dispatch(userSlice.actions.logoutSuccess(response.data.message));
     dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(userSlice.actions.logoutFailed(error.response.data.message));
