@@ -26,6 +26,7 @@ const Dashboard = () => {
   const handleLogout = () => {
     dispatch(logout());
     toast.success("Logged out successfully.");
+    navigateTo("/");
   };
   useEffect(() => {
     if (error) {
